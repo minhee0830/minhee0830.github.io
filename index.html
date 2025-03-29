@@ -2,15 +2,65 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>민희의 개발 블로그</title>
+  <title>mini's dev diary</title>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
       font-family: 'Gowun Dodum', sans-serif;
+      margin: 0;
+      display: flex;
       background-color: #fff0f5;
       color: #333;
+    }
+
+    /* 좌측 사이드바 */
+    .sidebar {
+      width: 220px;
+      background-color: #ffd3e2;
+      height: 100vh;
+      padding: 30px 20px;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    .sidebar h2 {
+      color: #d63384;
+      margin-bottom: 30px;
+      font-size: 1.6rem;
+    }
+
+    .sidebar a {
+      display: block;
+      margin: 10px 0;
+      color: #444;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .sidebar a:hover {
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    .sns {
+      margin-top: 40px;
+    }
+
+    .sns a {
+      margin-right: 10px;
+      font-size: 1.5rem;
+      color: #d63384;
+      text-decoration: none;
+    }
+
+    /* 메인 컨텐츠 */
+    .main {
+      margin-left: 240px;
       padding: 40px;
-      margin: 0;
+      flex: 1;
     }
 
     .container {
@@ -43,6 +93,12 @@
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .log-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
     }
 
     .log-item h3 {
@@ -59,32 +115,45 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>💻 민희의 개발 블로그</h1>
-    <p>안녕하세요! 핑크핑크한 감성을 사랑하는 개발자 민희입니다 :)<br>
-    이곳은 저의 개발 여정과 공부 기록을 담아가는 공간이에요.</p>
-
-    <div class="dev-log">
-      <h2>📝 개발 일지</h2>
-
-      <div class="log-item">
-        <h3>2025-03-30 | GitHub 블로그 처음 만들기 🎉</h3>
-        <p>처음으로 index.html을 만들어서 GitHub Pages에 올려봤어요! 터미널이랑 push, commit도 해보고 진짜 개발자가 된 느낌이에요 💖</p>
-      </div>
-
-      <div class="log-item">
-        <h3>2025-03-31 | HTML 폰트 바꾸고 스타일 입히기 ✨</h3>
-        <p>Gowun Dodum 폰트를 적용하고 배경색도 핑크핑크하게 바꿨어요! 완전 내 스타일~</p>
-      </div>
-
-      <!-- 여기에 계속 추가해가면 돼! -->
+  <!-- 좌측 사이드바 -->
+  <div class="sidebar">
+    <h2>💖 mini's dev diary</h2>
+    <a href="#">소개</a>
+    <a href="#">개발일지</a>
+    <a href="#">연락하기</a>
+    <div class="sns">
+      <a href="https://github.com/minhee0830" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://instagram.com/minimi_world" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
+  </div>
 
-    <div class="footer">
-      © 2025 Minhee. All rights reserved.
+  <!-- 메인 컨텐츠 -->
+  <div class="main">
+    <div class="container">
+      <h1>mini's dev diary</h1>
+      <p>안녕하세요! 개발자가 되고싶어 공부를 시작한 mini 입니다 :) <br>
+      이곳은 저의 개발 여정과 공부 기록을 담아가는 공간이에요.</p>
+
+      <div class="dev-log">
+        <h2>📝 개발 일지</h2>
+
+        <div class="log-item">
+          <h3>2025-03-30 | GitHub 블로그 처음 만들기 🎉</h3>
+          <p>처음으로 index.html을 만들어서 GitHub Pages에 올려봤어요! 깃허브 관리하면서 블로그도 만들어보고싶었는데, 너무 신기해요! </p>
+        </div>
+
+        <div class="log-item">
+          <h3>2025-03-31 | HTML 폰트 바꾸고 스타일 입히기 ✨</h3>
+          <p>Gowun Dodum 폰트를 적용하고 배경색도 핑크핑크하게 바꿨어요! 흠 너무 핑크한 느낌인가?</p>
+        </div>
+
+        <!-- 새로운 일지를 여기 추가해가면 돼! -->
+      </div>
+
+      <div class="footer">
+        © 2025 Minhee. All rights reserved.
+      </div>
     </div>
   </div>
 </body>
 </html>
-
-
